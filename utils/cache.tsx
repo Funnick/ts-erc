@@ -1,4 +1,4 @@
-type CacheObj = { 
+export type CacheObj = { 
     base: string, 
     symbol: string, 
     timestamp: number,

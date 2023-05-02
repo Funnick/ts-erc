@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Test CurrencyContainer Snapshot 1`] = `
+<div
+  className="sc-kPTPQs dVARFL"
+>
+  <div
+    className="sc-ispOId duzTmJ"
+  >
+    <p
+      className="sc-fFGjHI fxeOjw"
+    >
+      From
+    </p>
+    <div
+      className="sc-kcuKUB cgcjto"
+    >
+      <img
+        alt="RF-flag"
+        className="sc-dcrmVg deDNXi"
+        height={25}
+        src="https://flagsapi.com/RF/flat/64.png"
+        width={25}
+      />
+      <select
+        className="sc-kuWgmH dWoOPP"
+        onChange={[Function]}
+        value="EUR"
+      >
+        <option
+          className="sc-duSInm"
+          value="EUR"
+        >
+          EUR
+        </option>
+        <option
+          className="sc-duSInm"
+          value="CAD"
+        >
+          CAD
+        </option>
+        <option
+          className="sc-duSInm"
+          value="USD"
+        >
+          USD
+        </option>
+      </select>
+    </div>
+  </div>
+  <div
+    className="sc-ispOId sc-jrrXlR duzTmJ gjvJFm"
+    role="icon-column"
+  >
+    <i
+      className="sc-crozmw bDavlu fas fa-exchange-alt"
+      onClick={[Function]}
+      role="icon"
+    />
+  </div>
+  <div
+    className="sc-ispOId duzTmJ"
+  >
+    <p
+      className="sc-fFGjHI fxeOjw"
+    >
+      To
+    </p>
+    <div
+      className="sc-kcuKUB cgcjto"
+    >
+      <img
+        alt="US-flag"
+        className="sc-dcrmVg deDNXi"
+        height={25}
+        src="https://flagsapi.com/US/flat/64.png"
+        width={25}
+      />
+      <select
+        className="sc-kuWgmH dWoOPP"
+        onChange={[Function]}
+        value="USD"
+      >
+        <option
+          className="sc-duSInm"
+          value="EUR"
+        >
+          EUR
+        </option>
+        <option
+          className="sc-duSInm"
+          value="CAD"
+        >
+          CAD
+        </option>
+        <option
+          className="sc-duSInm"
+          value="USD"
+        >
+          USD
+        </option>
+      </select>
+    </div>
+  </div>
+</div>
+`;
