@@ -4,7 +4,7 @@ import { Change, ConvertText, FlexContainer,
 type ConvertDisplayProps = {
     prevAmount: number
     prevFromCurrency: string
-    converted: number
+    converted?: number
     prevToCurrency: string
     converting: boolean
 }
