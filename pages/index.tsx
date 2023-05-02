@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { useState, useEffect, ChangeEvent } from 'react';
 
 import { codes } from '../utils/country_flag_code';
+import { read, get, write } from '@/utils/cache';
 
 import CurrencyContainer from '../components/CurrencyContainer';
 import ConvertDisplay from '@/components/ConvertDisplay';
@@ -67,10 +68,13 @@ export default function Home() {
     fetch(`${BASE_URL}?symbols=${toCurrency}&base=${fromCurrency}`, options)
       .then(res => res.json())
       .then(data => {
+        const rate: number = data.rates[toCurrency]
+        const timestamp: number = data.timestamp
         setPrevAmount(amount)
         setPrevFromCurrency(fromCurrency)
         setPrevToCurrency(toCurrency)
-        setConverted(amount * data.rates[toCurrency])
+        setConverted(amount * rate)
+        write(fromCurrency, toCurrency, timestamp, rate)
         setConverting(false)
       })
       .catch( err => {
@@ -80,7 +84,16 @@ export default function Home() {
   }
 
   function handleConvert() {
-    convert()
+    const index = read(fromCurrency, toCurrency)
+    if (index >= 0) {
+      const rate = get(index)
+      setPrevAmount(amount)
+      setPrevFromCurrency(fromCurrency)
+      setPrevToCurrency(toCurrency)
+      setConverted(amount * rate)
+    } else {
+      convert()
+    }
   }
 
   function handleSwap() {
