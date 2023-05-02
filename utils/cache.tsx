@@ -67,7 +67,6 @@ export const validTime = (currentTime: number, timestamp: number) => currentTime
 export const read = (base: string, symbol: string) => {
     const currentTime = new Date().getTime();
     
-    console.log(cache)
     let index = -1;
     cache.forEach((elem, i) => {
         if (elem.base === base &&

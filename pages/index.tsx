@@ -18,8 +18,8 @@ export default function Home() {
   const [ prevAmount, setPrevAmount ] = useState<number>(1)
   const [ fromCurrency, setFromCurrency ] = useState<string>("EUR")
   const [ prevFromCurrency, setPrevFromCurrency] = useState<string>("EUR")
-  const [ toCurrency, setToCurrency ] = useState<string>("")
-  const [ prevToCurrency, setPrevToCurrency ] = useState<string>("")
+  const [ toCurrency, setToCurrency ] = useState<string>("AED")
+  const [ prevToCurrency, setPrevToCurrency ] = useState<string>("AED")
   const [ currencies, setCurrencies ] = useState<string[]>([])
   const [ converted, setConverted ] = useState<number | undefined>()
 
