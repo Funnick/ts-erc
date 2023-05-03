@@ -11,7 +11,8 @@ import ConvertDisplay from '@/components/ConvertDisplay';
 import { Main, Card, Title, Text, Input,
         Button, CenterText } from '@/components/styled/styledComponents';
 
-const BASE_URL: string = "https://api.apilayer.com/exchangerates_data/latest?"
+const BASE_URL: string = process.env.NEXT_PUBLIC_BASE_URL === undefined ? "vacio" : process.env.NEXT_PUBLIC_BASE_URL 
+const API_KEY: string = process.env.NEXT_PUBLIC_API_KEY === undefined ? "vacio" : process.env.NEXT_PUBLIC_API_KEY
 
 export default function Home() {
   const [ amount, setAmount ] = useState<number>(1)
@@ -28,8 +29,8 @@ export default function Home() {
   const [ error, setError ] = useState<string | undefined>()
 
   useEffect(() => {
-    const options = {headers: {apikey: 'iEehHtDlUoCY3M5ZXojenDiz4lJlB4RO'}};
-
+    const options = {headers: {apikey: API_KEY}};
+    
     setLoading(true)
     fetch(BASE_URL, options)
       .then(res => res.json())
@@ -62,7 +63,7 @@ export default function Home() {
   }
 
   function convert() {
-    const options = {headers: {apikey: 'iEehHtDlUoCY3M5ZXojenDiz4lJlB4RO'}};
+    const options = {headers: {apikey: API_KEY}};
     setConverting(true)
 
     fetch(`${BASE_URL}?symbols=${toCurrency}&base=${fromCurrency}`, options)
