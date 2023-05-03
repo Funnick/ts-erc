@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Test ConvertDisplay Snapshot_1 1`] = `
+<div
+  className="sc-jJTsDX hVWvFj"
+>
+  <p
+    className="sc-fFGjHI sc-dicizt sc-iVCKna fxeOjw chuGhL bwBmdQ"
+  >
+    Converting...
+  </p>
+</div>
+`;
+
+exports[`Component Test ConvertDisplay Snapshot_2 1`] = `
+<div
+  className="sc-jJTsDX hVWvFj"
+>
+  <div
+    className="sc-kPTPQs dVARFL"
+  >
+    <div
+      className="sc-ispOId duzTmJ"
+    >
+      <p
+        className="sc-fFGjHI sc-dicizt fxeOjw chuGhL"
+      >
+        1
+         
+        EUR
+      </p>
+    </div>
+    <div
+      className="sc-ispOId sc-jrrXlR duzTmJ gjvJFm"
+    >
+      <p
+        className="sc-fFGjHI fxeOjw"
+      >
+        =
+      </p>
+    </div>
+    <div
+      className="sc-ispOId duzTmJ"
+    >
+      <p
+        className="sc-fFGjHI sc-dicizt fxeOjw chuGhL"
+      >
+        5
+         
+        USD
+      </p>
+    </div>
+  </div>
+</div>
+`;
